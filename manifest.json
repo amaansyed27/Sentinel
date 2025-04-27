@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Sentinel - Security Assistant",
+  "version": "1.0.0",
+  "description": "Website security analysis and screen data viewer with AI-powered insights",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "webNavigation",
+    "webRequest",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:3030/*",
+    "https://api.groq.com/*",
+    "https://www.virustotal.com/api/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/sentinel16.png",
+      "48": "icons/sentinel48.png",
+      "128": "icons/sentinel128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/sentinel16.png",
+    "48": "icons/sentinel48.png",
+    "128": "icons/sentinel128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://localhost:* http://localhost:* https://api.groq.com/openai/v1/chat/completions https://api.groq.com/* https://www.virustotal.com/api/v3/*"
+  },
+  "options_page": "settings.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["linkMarkers.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

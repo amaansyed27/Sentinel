@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Screenpipe Data Viewer Settings</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <h1>Screenpipe Data Viewer Settings</h1>
+  
+  <div class="form-group">
+    <label for="fetchLimit">Fetch Limit</label>
+    <input type="number" id="fetchLimit" min="5" max="100" value="20" placeholder="Number of items to fetch">
+    <div class="api-info">
+      <p>Maximum number of items to retrieve from Screenpipe. Higher values may take longer to load.</p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="defaultContentType">Default Content Type</label>
+    <select id="defaultContentType">
+      <option value="ocr" selected>OCR Text</option>
+      <option value="audio">Audio</option>
+      <option value="all">All Content</option>
+    </select>
+    <div class="api-info">
+      <p>Default content type to fetch when opening the extension.</p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label>Advanced Options</label>
+    <div class="toggle-container">
+      <input type="checkbox" id="showAdvanced" class="toggle-checkbox">
+      <label for="showAdvanced" class="toggle-label">Show Advanced Options</label>
+    </div>
+  </div>
+  
+  <div id="advancedSettings" style="display: none;">
+    <div class="form-group">
+      <label for="includeFrames">Include Image Frames (Experimental)</label>
+      <div class="toggle-control">
+        <input type="checkbox" id="includeFrames">
+        <span class="toggle-label">Disabled</span>
+      </div>
+      <div class="api-info warning">
+        <p><strong>Warning:</strong> Enabling this option may cause stability issues with certain Screenpipe versions. Use with caution.</p>
+      </div>
+    </div>
+  </div>
+  
+  <button id="saveSettings" class="primary">Save Settings</button>
+  <div id="status" class="status"></div>
+  
+  <script src="settings.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "sentinel-mk2-site",
+  "builds": [
+    {
+      "src": "site/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/site/$1"
+    }
+  ],
+  "github": {
+    "silent": true,
+    "autoJobCancelation": true
+  },
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./site/"
+}

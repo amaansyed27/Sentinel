@@ -1,0 +1,452 @@
+/* Analysis Page Specific Styles */
+.analysis-section {
+    padding: var(--spacing-8) 0;
+}
+
+.analysis-grid {
+    margin-bottom: 60px;
+}
+
+.analysis-category {
+    background-color: var(--bg-main);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.analysis-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.analysis-category-header {
+    padding: 20px;
+    background-color: var(--bg-element);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.analysis-category-header h2 {
+    margin-bottom: 0;
+    font-size: 1.4rem;
+}
+
+.analysis-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+}
+
+.analysis-category-body {
+    padding: 20px;
+}
+
+.analysis-category-body ul {
+    margin-left: 20px;
+}
+
+.analysis-category-body li {
+    margin-bottom: 15px;
+}
+
+.analysis-category-body li strong {
+    color: var(--primary-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Charts and Visualizations */
+.analysis-charts {
+    margin: 60px 0;
+    padding: 30px;
+    background-color: var(--bg-main);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.analysis-charts h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.chart-item {
+    background-color: var(--bg-subtle);
+    padding: 20px;
+    border-radius: var(--border-radius-md);
+}
+
+.chart-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chart {
+    padding: 10px;
+}
+
+/* Case Studies Section */
+.case-studies {
+    margin-top: 60px;
+}
+
+.case-studies h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.case-study {
+    background-color: var(--bg-main);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.case-study:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.case-study-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.case-study-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.case-study-body {
+    padding: 20px;
+}
+
+.case-study-body p {
+    margin-bottom: 15px;
+}
+
+/* Setup Guide Styles */
+.setup-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.setup-tab {
+    padding: 12px 24px;
+    background-color: var(--bg-element);
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.setup-tab:hover {
+    background-color: var(--border-medium);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.setup-tab.active {
+    background-color: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.setup-content {
+    background-color: var(--bg-main);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
+    box-shadow: var(--shadow-md);
+}
+
+.setup-tab-content {
+    display: none;
+}
+
+.setup-tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Download section enhancements */
+.download-options {
+    margin-top: 50px;
+}
+
+.download-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.download-card:hover {
+    transform: translateY(-8px) scale(1.01);
+}
+
+.download-card-header p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Feature Highlights - New Component */
+.feature-highlights {
+    margin-top: 20px;
+}
+
+.highlight-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: var(--bg-subtle);
+    padding: 15px;
+    border-radius: var(--border-radius-md);
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+    background-color: var(--bg-element);
+}
+
+.highlight-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.highlight-text h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--primary-dark);
+}
+
+.highlight-text p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Feature Comparison Table */
+.feature-comparison {
+    padding: var(--spacing-8) 0;
+    background-color: var(--bg-subtle);
+}
+
+.comparison-table-container {
+    max-width: 900px;
+    margin: 40px auto;
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: var(--bg-main);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.comparison-table th {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 600;
+}
+
+.comparison-table th:first-child {
+    border-top-left-radius: var(--border-radius-md);
+    text-align: left;
+}
+
+.comparison-table th:last-child {
+    border-top-right-radius: var(--border-radius-md);
+}
+
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.comparison-table tr:last-child td:first-child {
+    border-bottom-left-radius: var(--border-radius-md);
+}
+
+.comparison-table tr:last-child td:last-child {
+    border-bottom-right-radius: var(--border-radius-md);
+}
+
+.comparison-table i.check {
+    color: var(--success);
+}
+
+.comparison-table i.cross {
+    color: var(--danger);
+}
+
+/* Try It Yourself Section */
+.try-it-yourself {
+    padding: var(--spacing-8) 0;
+    background-color: var(--bg-main);
+}
+
+.try-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.try-step {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--bg-subtle);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.try-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.try-step-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 15px;
+}
+
+.try-step h3 {
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+}
+
+.try-step p {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.try-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--bg-element);
+    color: var(--text-secondary);
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.try-btn:hover {
+    background-color: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Feature Overview Section */
+.feature-overview {
+    padding: var(--spacing-6) 0;
+    background-color: var(--bg-main);
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .setup-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .setup-tab {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .analysis-category-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .highlight-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 10px;
+    }
+    
+    .try-steps {
+        grid-template-columns: 1fr;
+    }
+}

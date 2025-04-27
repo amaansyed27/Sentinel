@@ -1,0 +1,50 @@
+{
+  "name": "sentinel-security-assistant",
+  "version": "1.0.0",
+  "description": "Website security analysis and screen data viewer with AI-powered insights",
+  "dependencies": {
+    "@screenpipe/browser": "^0.1.40",
+    "@screenpipe/js": "^1.0.21",
+    "fs-extra": "^11.3.0",
+    "sharp": "^0.33.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.26.9",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "webpack": "^5.99.6",
+    "webpack-cli": "^6.0.1",
+    "rimraf": "^5.0.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "build:dev": "webpack --mode=development",
+    "watch": "webpack --watch --mode=development",
+    "clean": "rimraf dist",
+    "build:site": "echo 'Site is static - no build step required'",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'No linting configured'",
+    "preversion": "npm run lint",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags",
+    "prepare-release": "node scripts/prepare-release.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/sentinel-mk2.git"
+  },
+  "keywords": [
+    "security",
+    "browser-extension",
+    "ai",
+    "link-protection",
+    "threat-detection"
+  ],
+  "author": "Sentinel Security",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/sentinel-mk2/issues"
+  },
+  "homepage": "https://github.com/yourusername/sentinel-mk2#readme"
+}

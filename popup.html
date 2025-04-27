@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentinel - Cybersecurity Assistant</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-left">
+        <img src="icons/sentinel128.png" alt="Sentinel" class="sentinel-logo">
+        <div class="sentinel-title">SENTINEL</div>
+      </div>
+      <div class="header-right">
+        <svg class="settings-icon" id="openSettings" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      </div>
+    </header>
+
+    <div class="site-info">
+      <div class="site-header">
+        <div class="site-icon-container">
+          <img id="site-icon" src="icons/globe.png" alt="Site icon">
+        </div>
+        <div class="site-details">
+          <h2 id="site-name">Loading current URL...</h2>
+          <p id="site-url"></p>
+        </div>
+      </div>
+      <div class="security-score">
+        <span class="score-label">Security</span>
+        <div class="score-circle" id="security-score-circle">
+          <span id="security-score-value">...</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Removed scan button since scanning is automatic -->
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="overview" title="Overview">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+      </button>
+      <button class="tab-btn" data-tab="certificate" title="Certificate">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+      </button>
+      <button class="tab-btn" data-tab="ai-insights" title="AI Chat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </button>
+      <button class="tab-btn" data-tab="realtime" title="Real-Time Monitoring">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+      </button>
+      <button class="tab-btn" data-tab="history" title="Scan History">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        </svg>
+      </button>
+      <!-- Hide settings tab since we moved it to the header -->
+      <button class="tab-btn tab-btn-hidden" data-tab="settings" title="Settings">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="tab-content">
+      <div id="overview" class="tab-pane active">
+        <div class="security-details">
+          <div class="security-item" id="connection-status">
+            <span class="label">Connection:</span>
+            <span class="value">Checking...</span>
+          </div>
+          <div class="security-item" id="ssl-status">
+            <span class="label">SSL/TLS:</span>
+            <span class="value">Checking...</span>
+          </div>
+          <div class="security-item" id="risk-score">
+            <span class="label">Risk Score:</span>
+            <span class="value">Checking...</span>
+          </div>
+          <div class="security-item" id="security-headers">
+            <span class="label">Security Headers:</span>
+            <span class="value">Checking...</span>
+          </div>
+          <div class="security-item" id="domain-age">
+            <span class="label">Domain Age:</span>
+            <span class="value">Checking...</span>
+          </div>
+          <div class="security-item" id="vendor-ratings">
+            <span class="label">Vendor Ratings:</span>
+            <span class="value">Checking...</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="certificate" class="tab-pane">
+        <div class="certificate-details">
+          <p>Loading certificate information...</p>
+        </div>
+      </div>
+
+      <div id="ai-insights" class="tab-pane">
+        <div class="chat-container">
+          <div class="chat-messages" id="chat-messages">
+            <!-- Messages will appear here -->
+            <div class="chat-message assistant-message">
+              How can I help you understand the security of this website?
+            </div>
+          </div>
+          <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type your security question...">
+            <button id="send-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="api-key-container">
+            <input type="password" id="api-key-input" placeholder="Enter Groq API Key">
+            <button id="save-api-key">Save</button>
+          </div>
+          <div class="powered-by">
+            Powered by Groq LLama 3 70B
+          </div>
+        </div>
+      </div>
+
+      <div id="realtime" class="tab-pane">
+        <div class="button-row">
+          <button id="fetchData" class="btn-primary">Fetch Screen Data</button>
+          <select id="contentType" class="content-type-select">
+            <option value="ocr">OCR Text</option>
+            <option value="audio">Audio</option>
+            <option value="all">All Content</option>
+          </select>
+        </div>
+        <div class="ai-analysis-panel">
+          <h3>AI Security Analysis</h3>
+          <div class="time-range-selector">
+            <span>Analyze last:</span>
+            <select id="timeRange">
+              <option value="10">10 minutes</option>
+              <option value="30">30 minutes</option>
+              <option value="60">1 hour</option>
+              <option value="360">6 hours</option>
+            </select>
+            <button id="analyzeData" class="btn-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              Analyze
+            </button>
+          </div>
+          <div id="analysisResult" class="analysis-result">
+            <p class="placeholder-text">Click "Analyze" to check your screen data for security issues</p>
+          </div>
+          <div class="auto-scan-status">
+            <span id="autoScanStatus">Auto-scan: Enabled (Next scan in 9 minutes)</span>
+          </div>
+        </div>
+        <div class="search-container">
+          <input type="text" id="filterQuery" placeholder="Search content...">
+          <button id="filterContent" class="btn-secondary">Filter</button>
+        </div>
+        <div id="contentDisplay" class="content-display">
+          <p>Click "Fetch Screen Data" to show screen captures and text.</p>
+        </div>
+        <div id="data" style="display:none;"></div>
+      </div>
+
+      <div id="history" class="tab-pane">
+        <h3>Security Scan History</h3>
+        <div class="history-filters">
+          <select id="historyPeriod">
+            <option value="day">Today</option>
+            <option value="week">This Week</option>
+            <option value="month">This Month</option>
+            <option value="all">All Time</option>
+          </select>
+          <button id="refreshHistory" class="btn-secondary">Refresh</button>
+        </div>
+        <div id="historyList" class="history-list">
+          <p class="placeholder-text">No scan history available</p>
+        </div>
+      </div>
+
+      <div id="settings" class="tab-pane">
+        <h3>Security Scan Settings</h3>
+        <div class="settings-section">
+          <h4>Auto-Scan Configuration</h4>
+          <div class="setting-item">
+            <label for="enableAutoScan">Enable Automatic Scanning</label>
+            <div class="toggle-switch">
+              <input type="checkbox" id="enableAutoScan" checked>
+              <span class="toggle-slider"></span>
+            </div>
+          </div>
+          
+          <div class="setting-item">
+            <label for="scanInterval">Scan Interval</label>
+            <select id="scanInterval">
+              <option value="10">Every 10 minutes</option>
+              <option value="30">Every 30 minutes</option>
+              <option value="60">Every hour</option>
+              <option value="360">Every 6 hours</option>
+              <option value="720">Every 12 hours</option>
+            </select>
+          </div>
+          
+          <div class="setting-item">
+            <label for="enableNotifications">Enable Notifications</label>
+            <div class="toggle-switch">
+              <input type="checkbox" id="enableNotifications" checked>
+              <span class="toggle-slider"></span>
+            </div>
+          </div>
+          
+          <div class="setting-item">
+            <label for="notifyThreshold">Notify Only For</label>
+            <select id="notifyThreshold">
+              <option value="high">High Risk Issues</option>
+              <option value="medium">Medium & High Risk Issues</option>
+              <option value="all">All Issues</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="settings-section">
+          <h4>API Configuration</h4>
+          <div class="setting-item api-key-setting">
+            <label for="groqApiKey">Groq API Key</label>
+            <div class="api-key-input">
+              <input type="password" id="groqApiKey" placeholder="Enter your Groq API key">
+              <button id="saveGroqApiKey" class="btn-secondary">Save</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="settings-section">
+          <h4>Data Retention</h4>
+          <div class="setting-item">
+            <label for="historyRetention">Keep History For</label>
+            <select id="historyRetention">
+              <option value="7">7 days</option>
+              <option value="30">30 days</option>
+              <option value="90">90 days</option>
+              <option value="-1">Forever</option>
+            </select>
+          </div>
+          
+          <div class="button-row">
+            <button id="clearHistory" class="btn-danger">Clear All History</button>
+          </div>
+        </div>
+        
+        <div class="settings-section">
+          <h4>Visual Indicators</h4>
+          <div class="setting-item">
+            <label for="enableLinkMarkers">Enable Link Markers</label>
+            <div class="toggle-switch">
+              <input type="checkbox" id="enableLinkMarkers">
+              <span class="toggle-slider"></span>
+            </div>
+          </div>
+          <div class="setting-item link-markers-options">
+            <label for="markerStyle">Marker Style</label>
+            <select id="markerStyle">
+              <option value="icon">Icons (✓, ⚠️, ✕)</option>
+              <option value="color">Color Indicators</option>
+              <option value="both">Both Icons and Colors</option>
+            </select>
+          </div>
+          <div class="marker-example-container">
+            <div class="marker-example">
+              <span class="marker-label">Safe:</span>
+              <span class="marker-demo marker-safe"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span>
+            </div>
+            <div class="marker-example">
+              <span class="marker-label">Warning:</span>
+              <span class="marker-demo marker-warning"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></span>
+            </div>
+            <div class="marker-example">
+              <span class="marker-label">Danger:</span>
+              <span class="marker-demo marker-danger"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span>
+            </div>
+          </div>
+          <p class="setting-description">Link markers will show next to URLs on websites to indicate their security rating based on our analysis.</p>
+        </div>
+        
+        <div class="settings-section">
+          <div class="button-row">
+            <button id="saveSettings" class="btn-primary">Save Settings</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <span>© 2025 Sentinel Cybersecurity</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

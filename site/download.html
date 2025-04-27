@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Sentinel MK2 - Advanced Web Security Assistant</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="images/sentinel-logo.png" alt="Sentinel Logo">
+                    <span>SENTINEL</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="setup.html">Setup Guide</a></li>
+                    <li><a href="download.html" class="active">Download</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="download-section">
+        <div class="container">
+            <h1 class="section-title">Download Sentinel MK2</h1>
+            <p class="text-center">Get the latest version of our security extension developed for the HackHazards 25 hackathon.</p>
+            
+            <div class="video-container">
+                <iframe width="855" height="479" src="https://www.youtube.com/embed/U0GpWONDVRU" title="Sentinel MK2 Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-description">
+                <p>Watch our demo video to see Sentinel MK2 in action before downloading.</p>
+            </div>
+            
+            <div class="download-options">
+                <div class="download-card">
+                    <div class="download-card-header">
+                        <h3>Sentinel MK2 Extension</h3>
+                        <p>Version 1.0.0 (Hackathon Demo)</p>
+                    </div>
+                    <div class="download-card-body">
+                        <p><strong>Released:</strong> April 2024</p>
+                        <p><strong>Size:</strong> ~2.5 MB</p>
+                        <p><strong>Compatibility:</strong> Chrome 88+, Edge 88+, Opera 74+</p>
+                        <ul>
+                            <li>Real-time website security analysis</li>
+                            <li>AI-powered security insights via Groq API</li>
+                            <li>Certificate and link security analysis</li>
+                            <li>Experimental Link Marking</li>
+                        </ul>
+                    </div>
+                    <div class="download-card-footer">
+                        <a href="dist.zip" class="primary-btn" download>
+                            <i class="fas fa-download"></i> Download ZIP
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="download-card">
+                    <div class="download-card-header" style="background-color: var(--secondary);">
+                        <h3>Screenpipe Companion</h3>
+                        <p>Required for screen analysis features</p>
+                    </div>
+                    <div class="download-card-body">
+                        <p>Screenpipe enhances Sentinel MK2 with screen content analysis capabilities.</p>
+                        <p>Available for multiple platforms:</p>
+                        <div class="download-buttons">
+                            <a href="downloads/screenpipe-windows-x64.zip" class="secondary-btn" download><i class="fab fa-windows"></i> Windows</a>
+                            <a href="downloads/screenpipe-macos.dmg" class="secondary-btn" download><i class="fab fa-apple"></i> macOS</a>
+                            <a href="downloads/screenpipe-linux-x64.tar.gz" class="secondary-btn" download><i class="fab fa-linux"></i> Linux</a>
+                        </div>
+                    </div>
+                    <div class="download-card-footer">
+                        <a href="setup.html#screenpipe-setup" class="secondary-btn">
+                            <i class="fas fa-info-circle"></i> Setup Instructions
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="download-card">
+                    <div class="download-card-header" style="background-color: var(--text-secondary);">
+                        <h3>Source Code</h3>
+                        <p>GitHub Repository</p>
+                    </div>
+                    <div class="download-card-body">
+                        <p>Access the complete source code for Sentinel MK2 on GitHub.</p>
+                        <p>Perfect for developers who want to:</p>
+                        <ul>
+                            <li>Review the code implementation</li>
+                            <li>Fork the project for improvements</li>
+                            <li>Submit issues or feature requests</li>
+                            <li>Learn about browser extension development</li>
+                        </ul>
+                    </div>
+                    <div class="download-card-footer">
+                        <a href="https://github.com/yourusername/sentinel-mk2" class="secondary-btn" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="installation-guide">
+                <h2>Quick Installation Instructions</h2>
+                <div class="installation-steps">
+                    <div class="installation-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Download & Extract</h3>
+                            <p>Download the extension ZIP file and extract it to a folder on your computer.</p>
+                        </div>
+                    </div>
+                    <div class="installation-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Open Extensions Page</h3>
+                            <p>In Chrome, navigate to <code>chrome://extensions/</code> or Menu → More Tools → Extensions.</p>
+                        </div>
+                    </div>
+                    <div class="installation-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Enable Developer Mode</h3>
+                            <p>Toggle on "Developer mode" in the top-right corner of the Extensions page.</p>
+                        </div>
+                    </div>
+                    <div class="installation-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Load Unpacked Extension</h3>
+                            <p>Click "Load unpacked" and select the extracted extension folder.</p>
+                        </div>
+                    </div>
+                    <div class="installation-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Configure API Key</h3>
+                            <p>Click the extension icon, go to Settings, and add your Groq API key.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: var(--spacing-6);">
+                    <a href="setup.html" class="secondary-btn">View Detailed Setup Guide</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hackathon-note">
+        <div class="container">
+            <div class="note-box">
+                <h2>Hackathon Project Note</h2>
+                <p>This extension was created as a demonstration for the HackHazards 25 hackathon and is not available on the Chrome Web Store. As such, it must be loaded as an "unpacked extension" in developer mode.</p>
+                <p>The focus of this project was to showcase the integration of browser extensions with AI services (particularly Groq API) to enhance web security.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="images/sentinel-logo.png" alt="Sentinel Logo">
+                        <span>SENTINEL</span>
+                    </div>
+                    <p>Advanced web security assistant created for the HackHazards 25 hackathon.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="setup.html">Setup Guide</a></li>
+                        <li><a href="download.html">Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/yourusername/sentinel-mk2" target="_blank">GitHub Repository</a></li>
+                        <li><a href="https://console.groq.com/" target="_blank">Groq API Console</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Project Links</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/yourusername/sentinel-mk2" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://sentinel-cyber.vercel.app" target="_blank"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 HackHazards 25 - Sentinel Security. Created for educational purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/site.js"></script>
+</body>
+</html>
