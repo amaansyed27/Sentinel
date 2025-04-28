@@ -1,71 +1,59 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Platform selection for Screenpipe installation instructions
+    // Mobile menu functionality
+    const mobileMenuBtn = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+    }
+    
+    // Platform selection tabs for Screenpipe
     const platformButtons = document.querySelectorAll('.platform-btn');
     const platformInstructions = document.querySelectorAll('.platform-instructions');
     
     platformButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Remove active class from all buttons
+            // Remove active class from all buttons and instructions
             platformButtons.forEach(btn => btn.classList.remove('active'));
+            platformInstructions.forEach(inst => inst.classList.remove('active'));
             
-            // Add active class to clicked button
+            // Add active class to clicked button and corresponding instructions
             this.classList.add('active');
-            
-            // Get selected platform
-            const platform = this.getAttribute('data-platform');
-            
-            // Hide all instruction sections
-            platformInstructions.forEach(instruction => {
-                instruction.classList.remove('active');
-            });
-            
-            // Show selected platform instructions
+            const platform = this.dataset.platform;
             document.getElementById(`${platform}-instructions`).classList.add('active');
         });
     });
     
-    // Copy to clipboard functionality
+    // Copy buttons functionality
     const copyButtons = document.querySelectorAll('.copy-btn');
     
     copyButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const textToCopy = this.getAttribute('data-clipboard-text');
-            
-            // Create a temporary textarea element to copy text
-            const textarea = document.createElement('textarea');
-            textarea.value = textToCopy;
-            textarea.style.position = 'fixed';  // Avoid scrolling to bottom
-            document.body.appendChild(textarea);
-            textarea.select();
-            
-            try {
-                // Execute copy command
-                document.execCommand('copy');
-                
-                // Visual feedback
-                const originalIcon = this.innerHTML;
-                this.innerHTML = '<i class="fas fa-check"></i>';
-                
-                // Reset icon after 2 seconds
-                setTimeout(() => {
-                    this.innerHTML = originalIcon;
-                }, 2000);
-                
-            } catch (err) {
-                console.error('Unable to copy text: ', err);
-            }
-            
-            document.body.removeChild(textarea);
+            const textToCopy = this.dataset.clipboardText;
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    // Visual feedback for copy success
+                    const originalIcon = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check"></i>';
+                    setTimeout(() => {
+                        this.innerHTML = originalIcon;
+                    }, 1500);
+                })
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
         });
     });
     
-    // Scroll progress indicator
+    // Scroll progress
     const scrollProgress = document.getElementById('scrollProgress');
     
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', function() {
         const totalHeight = document.body.scrollHeight - window.innerHeight;
         const progress = (window.pageYOffset / totalHeight) * 100;
-        scrollProgress.style.width = `${progress}%`;
+        scrollProgress.style.width = progress + '%';
     });
     
     // Download button actions
