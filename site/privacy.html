@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Sentinel MK2</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/additional.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
+    <!-- Enhanced Header -->
+    <header class="enhanced-header">
+        <div class="container header-container">
             <nav>
                 <div class="logo">
                     <img src="images/sentinel-logo.png" alt="Sentinel Logo">
                     <span>SENTINEL</span>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="setup.html">Setup Guide</a></li>
-                    <li><a href="download.html">Download</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="features.html"><i class="fas fa-shield-alt"></i> Features</a></li>
+                    <li><a href="setup.html"><i class="fas fa-cogs"></i> Setup Guide</a></li>
+                    <li><a href="download.html"><i class="fas fa-download"></i> Download</a></li>
                 </ul>
+                <a href="https://github.com/amaansyed27/Sentinel" target="_blank" class="github-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -31,139 +36,166 @@
         </div>
     </header>
 
-    <section class="privacy-section">
+    <!-- Progress Indicator -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <section class="privacy-hero">
         <div class="container">
             <h1 class="section-title">Privacy Policy</h1>
-            <div class="hackathon-badge">
-                <span>HackHazards 25 Project</span>
-            </div>
-            
+            <p class="text-center">Last updated: April 2025</p>
+        </div>
+    </section>
+
+    <section class="privacy-section">
+        <div class="container">
             <div class="privacy-content">
                 <div class="privacy-block">
                     <h2>Introduction</h2>
-                    <p>Sentinel MK2 was created as a hackathon project for the HackHazards 25 event. We take your privacy seriously and have developed this policy to explain how we handle your data.</p>
-                    <p>This privacy policy applies to the Sentinel MK2 browser extension and companion applications.</p>
+                    <p>Welcome to the Sentinel MK2 Privacy Policy. This document outlines how we collect, use, and protect your information when you use our browser extension.</p>
+                    <p>Sentinel MK2 was created for the HackHazards 25 hackathon and is intended for educational purposes. We take privacy seriously and have designed the extension with user security and privacy in mind.</p>
                 </div>
-                
+
                 <div class="privacy-block">
-                    <h2>Data Collection</h2>
-                    <h3>What data we collect</h3>
-                    <p>Sentinel MK2 may collect the following types of data:</p>
+                    <h2>Information Collection</h2>
+                    <p>Sentinel MK2 is designed with privacy as a core principle. Here's what you should know about the data we collect:</p>
+                    
+                    <h3>Data Stored Locally</h3>
                     <ul>
-                        <li>URLs of websites you visit (to perform security analysis)</li>
-                        <li>Website content for security analysis purposes</li>
-                        <li>Screen content when the screen analysis feature is enabled via Screenpipe</li>
-                        <li>API keys that you provide manually</li>
+                        <li><strong>API Keys:</strong> Your Groq API key is stored locally in your browser's extension storage and is never transmitted to our servers.</li>
+                        <li><strong>Configuration Settings:</strong> Your preferences and settings for the extension are stored locally on your device.</li>
                     </ul>
                     
-                    <h3>How we use this data</h3>
-                    <p>The data collected is used exclusively for:</p>
+                    <h3>Data Analyzed But Not Collected</h3>
                     <ul>
-                        <li>Performing real-time security assessments of websites</li>
-                        <li>Analyzing links for potential security threats</li>
-                        <li>Providing AI-powered security insights via the Groq API</li>
-                        <li>Detecting potential phishing attempts or visual deception</li>
+                        <li><strong>Webpage Content:</strong> The extension analyzes web page content to provide security assessments, but this data is processed locally and is not collected or stored.</li>
+                        <li><strong>URLs:</strong> Website URLs are analyzed to check security, but are not logged or stored beyond the current browsing session.</li>
+                        <li><strong>Screen Content:</strong> When using the Screenpipe integration, screen content is analyzed locally on your device to detect security risks. This data does not leave your device.</li>
                     </ul>
                 </div>
                 
                 <div class="privacy-block">
-                    <h2>Data Storage</h2>
-                    <p>Sentinel MK2 prioritizes your privacy in the following ways:</p>
+                    <h2>External Services</h2>
+                    <p>Sentinel MK2 interacts with the following external services:</p>
+                    
+                    <h3>Groq API</h3>
+                    <p>When you use the AI-powered security features, queries are sent to the Groq API using your personal API key. These queries may include information about the current website you're visiting to provide context-relevant security analysis.</p>
+                    <p>Please refer to <a href="https://console.groq.com/docs/privacy" target="_blank">Groq's Privacy Policy</a> for information on how they handle data.</p>
+                    
+                    <h3>Screenpipe</h3>
+                    <p>The Screenpipe integration works locally on your computer. Screen content is analyzed locally and is not transmitted to external servers. For more information, please see <a href="https://github.com/mediar-ai/screenpipe" target="_blank">Screenpipe's documentation</a>.</p>
+                </div>
+                
+                <div class="privacy-block">
+                    <h2>Data Security</h2>
+                    <p>We implement several security measures to protect your information:</p>
                     <ul>
-                        <li>All analysis is performed locally within your browser whenever possible</li>
-                        <li>Your Groq API key is stored securely in Chrome's extension storage system</li>
-                        <li>Screen content is processed locally and is not persistently stored</li>
-                        <li>No user data is transmitted to our servers, as this is a client-side only extension</li>
+                        <li>Data is processed locally on your device whenever possible</li>
+                        <li>API keys are stored securely using browser extension storage mechanisms</li>
+                        <li>No persistent logs are maintained of your browsing activity</li>
+                        <li>Communications with external APIs use secure HTTPS connections</li>
                     </ul>
                 </div>
                 
                 <div class="privacy-block">
-                    <h2>Third-Party Services</h2>
-                    <p>Sentinel MK2 integrates with the following third-party services:</p>
+                    <h2>User Controls</h2>
+                    <p>Sentinel MK2 gives you control over your data:</p>
                     <ul>
-                        <li><strong>Groq API:</strong> When you use the AI chat feature, website content may be sent to Groq's API for analysis. Please review <a href="https://groq.com/privacy" target="_blank">Groq's Privacy Policy</a> for more information on how they handle data.</li>
-                        <li><strong>Screenpipe:</strong> If you enable screen content analysis, Screenpipe captures and processes screen content locally on your device. No screen content is transmitted outside your device unless explicitly initiated by you.</li>
+                        <li>You can disable specific features that you're not comfortable with</li>
+                        <li>You can reset all settings to defaults at any time</li>
+                        <li>Uninstalling the extension removes all stored data</li>
                     </ul>
                 </div>
                 
                 <div class="privacy-block">
-                    <h2>Your Rights</h2>
-                    <p>As a user of Sentinel MK2, you have the right to:</p>
+                    <h2>Changes to This Policy</h2>
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+                    <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                </div>
+                
+                <div class="privacy-block">
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy, please contact us:</p>
                     <ul>
-                        <li>Disable any feature of the extension at any time</li>
-                        <li>Uninstall the extension to stop all data processing</li>
-                        <li>Clear your browser's extension storage to remove any stored preferences</li>
+                        <li>By visiting our GitHub repository: <a href="https://github.com/amaansyed27/Sentinel" target="_blank">https://github.com/amaansyed27/Sentinel</a></li>
+                        <li>By creating an issue in the repository</li>
                     </ul>
                 </div>
                 
-                <div class="privacy-block">
-                    <h2>Updates to this Policy</h2>
-                    <p>As this is a hackathon project, this privacy policy may be updated if the project is developed further. Any significant changes will be communicated through the project's GitHub repository.</p>
-                </div>
-                
-                <div class="privacy-block">
-                    <h2>Contact Information</h2>
-                    <p>If you have any questions about this privacy policy, please reach out through the <a href="https://github.com/yourusername/sentinel-mk2/issues" target="_blank">GitHub issues page</a>.</p>
-                </div>
-                
-                <div class="privacy-block">
-                    <h2>Hackathon Context</h2>
-                    <p>Please note that Sentinel MK2 was developed as part of the HackHazards 25 hackathon and is primarily a demonstration project. It was not designed for large-scale deployment or commercial use.</p>
+                <div class="privacy-footer">
+                    <p>This Privacy Policy was created for the HackHazards 25 hackathon project and is provided for educational purposes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- New HackHazards Banner Section -->
-    <section class="hackathon-banner">
-        <div class="hackathon-banner-content">
-            <h2>HackHazards '25 Submission</h2>
-            <p>This project was proudly built during HackHazards '25 - India's biggest community hackathon organized by the Namespace community.</p>
-            <img src="images/hackhazards-banner.png" alt="HackHazards 2025 Hackathon Banner">
-        </div>
-    </section>
-
+    <!-- Redesigned Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <div class="logo">
+        <div class="footer-wave"></div>
+        <div class="container footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
                         <img src="images/sentinel-logo.png" alt="Sentinel Logo">
                         <span>SENTINEL</span>
                     </div>
-                    <p>Advanced web security assistant created for the HackHazards 25 hackathon.</p>
+                    <p>An AI-powered browser security extension enhancing your online safety with real-time threat detection and analysis.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/amaansyed27/Sentinel" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://sentinel-cyber.vercel.app" target="_blank" class="social-icon">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-column">
                     <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="setup.html">Setup Guide</a></li>
-                        <li><a href="download.html">Download</a></li>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="features.html"><i class="fas fa-chevron-right"></i> Features</a></li>
+                        <li><a href="setup.html"><i class="fas fa-chevron-right"></i> Setup Guide</a></li>
+                        <li><a href="download.html"><i class="fas fa-chevron-right"></i> Download</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Resources</h4>
-                    <ul>
-                        <li><a href="https://github.com/yourusername/sentinel-mk2" target="_blank">GitHub Repository</a></li>
-                        <li><a href="https://console.groq.com/" target="_blank">Groq API Console</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/amaansyed27/Sentinel" target="_blank"><i class="fas fa-chevron-right"></i> GitHub Repository</a></li>
+                        <li><a href="https://console.groq.com/" target="_blank"><i class="fas fa-chevron-right"></i> Groq API Console</a></li>
+                        <li><a href="https://github.com/mediar-ai/screenpipe" target="_blank"><i class="fas fa-chevron-right"></i> Screenpipe Documentation</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Project Links</h4>
-                    <div class="social-icons">
-                        <a href="https://github.com/yourusername/sentinel-mk2" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://sentinel-cyber.vercel.app" target="_blank"><i class="fas fa-globe"></i></a>
-                    </div>
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/amaansyed27/Sentinel/issues" target="_blank"><i class="fas fa-chevron-right"></i> Report Issues</a></li>
+                        <li><a href="https://github.com/amaansyed27/Sentinel/pulls" target="_blank"><i class="fas fa-chevron-right"></i> Contribute</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2024 HackHazards 25 - Sentinel Security. Created for educational purposes.</p>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 Sentinel MK2. All rights reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="https://github.com/amaansyed27/Sentinel/blob/main/LICENSE" target="_blank">License</a>
+                </div>
+            </div>
+            
+            <div class="hackathon-credit">
+                Created for <a href="https://namespace.community/hackhazards" target="_blank">HackHazards 25</a> - India's biggest community hackathon by Namespace.
             </div>
         </div>
     </footer>
 
     <script src="js/site.js"></script>
+    <script src="js/navigation.js"></script>
 </body>
 </html>

@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Setup Guide - Sentinel MK2</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/additional.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
+    <!-- Enhanced Header -->
+    <header class="enhanced-header">
+        <div class="container header-container">
             <nav>
                 <div class="logo">
                     <img src="images/sentinel-logo.png" alt="Sentinel Logo">
                     <span>SENTINEL</span>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="setup.html" class="active">Setup Guide</a></li>
-                    <li><a href="download.html">Download</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="features.html"><i class="fas fa-shield-alt"></i> Features</a></li>
+                    <li><a href="setup.html" class="active"><i class="fas fa-cogs"></i> Setup Guide</a></li>
+                    <li><a href="download.html"><i class="fas fa-download"></i> Download</a></li>
                 </ul>
+                <a href="https://github.com/amaansyed27/Sentinel" target="_blank" class="github-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -31,158 +36,197 @@
         </div>
     </header>
 
-    <section class="setup-section">
+    <!-- Progress Indicator -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <!-- Setup Hero Section -->
+    <section class="setup-hero">
         <div class="container">
             <h1 class="section-title">Setup Guide</h1>
-            
+            <p class="text-center">Follow these simple steps to install and configure Sentinel MK2</p>
+        </div>
+    </section>
+
+    <!-- Setup Navigation Tabs -->
+    <section class="setup-navigation">
+        <div class="container">
             <div class="setup-tabs">
                 <button class="setup-tab active" data-tab="extension">Extension Setup</button>
-                <button class="setup-tab" data-tab="screenpipe">Screenpipe Setup</button>
+                <button class="setup-tab" data-tab="screencapture">Screencapture Setup</button>
                 <button class="setup-tab" data-tab="api">API Configuration</button>
             </div>
-            
+
+            <!-- Extension Setup Tab -->
             <div class="setup-content">
                 <div class="setup-tab-content active" id="extension-setup">
-                    <h2>Installing Sentinel MK2 Extension</h2>
-                    <div class="hackathon-note-inline">
-                        <p><i class="fas fa-info-circle"></i> This extension was developed for the HackHazards 25 hackathon and requires manual installation in developer mode.</p>
-                    </div>
-                    
-                    <div class="setup-steps">
-                        <div class="setup-step">
-                            <h3>1. Download the Extension</h3>
-                            <p>Download the unpacked extension from our <a href="download.html">Download Page</a> or directly from the <a href="https://github.com/yourusername/sentinel-mk2" target="_blank">GitHub repository</a> (dist folder).</p>
-                        </div>
-                        
-                        <div class="setup-step">
-                            <h3>2. Enable Developer Mode</h3>
-                            <p>Open Chrome and navigate to <code>chrome://extensions/</code> or go to Menu → More Tools → Extensions.</p>
-                            <p>Toggle on the "Developer mode" switch in the top-right corner of the Extensions page.</p>
-                            <img src="images/developer-mode.png" alt="Developer Mode Toggle" class="setup-image">
-                        </div>
-                        
-                        <div class="setup-step">
-                            <h3>3. Load Unpacked Extension</h3>
-                            <p>Click the "Load unpacked" button, then navigate to and select the folder where you downloaded the extension files.</p>
-                            <div class="note-box">
-                                <p><strong>Note:</strong> If you downloaded from GitHub, select the "dist" folder that contains the manifest.json file.</p>
-                            </div>
-                            <img src="images/load-unpacked.png" alt="Load Unpacked Button" class="setup-image">
-                        </div>
-                        
-                        <div class="setup-step">
-                            <h3>4. Add Groq API Key</h3>
-                            <p>Click the Sentinel MK2 icon in your browser toolbar, then go to the Settings tab (gear icon).</p>
-                            <p>Enter your Groq API key in the designated field and save your settings.</p>
-                            <div class="tip-box">
-                                <p><strong>Tip:</strong> If you don't have a Groq API key yet, see the "API Configuration" tab for instructions.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="setup-step">
-                            <h3>5. And Voila!</h3>
-                            <p>The Sentinel MK2 extension is now installed and ready to use. You should see the icon in your browser toolbar.</p>
-                            <p>Click the icon to open the extension and start enjoying enhanced web security!</p>
+                    <div class="setup-intro">
+                        <div class="setup-notice">
+                            <i class="fas fa-info-circle"></i>
+                            <p>This extension was developed for the HackHazards 25 hackathon and requires manual installation in developer mode.</p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="setup-tab-content" id="screenpipe-setup">
-                    <h2>Setting Up Screenpipe</h2>
-                    <p>Screenpipe is a companion application that enhances Sentinel MK2's ability to analyze screen content for security risks.</p>
-                    
-                    <div class="note-box">
-                        <p><strong>Important:</strong> Screenpipe is currently only available for Windows.</p>
-                    </div>
-                    
-                    <div class="setup-steps">
+
+                    <div class="setup-steps-container">
                         <div class="setup-step">
-                            <h3>1. Open Terminal</h3>
-                            <p>Open Windows PowerShell or Command Prompt with normal user permissions (no need for administrator rights).</p>
-                            <div class="tip-box">
-                                <p><strong>Tip:</strong> You can search for "PowerShell" in the Start menu to find it quickly.</p>
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Download the Extension</h3>
+                                <p>Download the unpacked extension from our <a href="download.html">Download Page</a> or directly from the <a href="https://github.com/amaansyed27/Sentinel" target="_blank">GitHub repository</a> (.zip folder).</p>
+                                <div class="step-action">
+                                    <a href="download.html" class="primary-btn"><i class="fas fa-download"></i> Download Extension</a>
+                                </div>
                             </div>
                         </div>
-                        
+
                         <div class="setup-step">
-                            <h3>2. Run Installation Command</h3>
-                            <p>Copy and paste the following command into your terminal and press Enter:</p>
-                            <div class="code-block">
-                                <pre><code>iwr get.screenpi.pe/cli.ps1 | iex</code></pre>
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Enable Developer Mode</h3>
+                                <p>Open Chrome and navigate to <code>chrome://extensions/</code> or go to Menu → More Tools → Extensions.</p>
+                                <p>Toggle on the "Developer mode" switch in the top-right corner of the Extensions page.</p>
                             </div>
-                            <p>This command will download and install the Screenpipe application on your computer.</p>
                         </div>
-                        
+
                         <div class="setup-step">
-                            <h3>3. Launch Screenpipe</h3>
-                            <p>After installation completes, type the following command to launch Screenpipe:</p>
-                            <div class="code-block">
-                                <pre><code>screenpipe.exe</code></pre>
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Load Unpacked Extension</h3>
+                                <p>Click the "Load unpacked" button, then navigate to and select the folder where you downloaded the extension files.</p>
+                                <div class="step-note">
+                                    <strong>Note:</strong> If you downloaded from GitHub, select the "dist" folder that contains the manifest.json file.
+                                </div>
                             </div>
-                            <p>This will start the Screenpipe application, which will run in the background.</p>
                         </div>
-                        
+
                         <div class="setup-step">
-                            <h3>4. Screenpipe is Ready</h3>
-                            <p>Once Screenpipe is running, you'll see its icon in your system tray. The application is now ready to work with Sentinel MK2.</p>
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Add Groq API Key</h3>
+                                <p>Click the Sentinel MK2 icon in your browser toolbar, then go to the Settings tab (gear icon).</p>
+                                <p>Enter your Groq API key in the designated field and save your settings.</p>
+                                <div class="step-note">
+                                    <strong>Tip:</strong> Don't have a Groq API key yet? See the "API Configuration" tab for instructions.
+                                </div>
+                            </div>
                         </div>
-                        
+
                         <div class="setup-step">
-                            <h3>5. Usage Note</h3>
-                            <p>Always run Screenpipe before using the Sentinel MK2 extension for screen content analysis features.</p>
-                            <div class="note-box">
-                                <p><strong>Important:</strong> You'll need to launch Screenpipe each time you restart your computer or want to use the screen analysis features.</p>
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>And Voilà!</h3>
+                                <p>The Sentinel MK2 extension is now installed and ready to use. You should see the icon in your browser toolbar.</p>
+                                <p>Click the icon to open the extension and start enjoying enhanced web security!</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
+                <!-- Screencapture Setup Tab -->
+                <div class="setup-tab-content" id="screencapture-setup">
+                    <div class="setup-intro">
+                        <p>Sentinel MK2 includes screen content analysis to detect visual phishing attempts. To enable this feature, you'll need to grant screen capture permissions.</p>
+                    </div>
+
+                    <div class="setup-steps-container">
+                        <div class="setup-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Enable Screen Capture</h3>
+                                <p>Click the Sentinel MK2 icon in your browser toolbar to open the extension popup.</p>
+                                <p>Navigate to the "Screen Analysis" tab.</p>
+                            </div>
+                        </div>
+
+                        <div class="setup-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Grant Permissions</h3>
+                                <p>Click the "Enable Screen Analysis" button in the extension.</p>
+                                <p>When prompted, select the screen or window you want to capture and click "Share".</p>
+                            </div>
+                        </div>
+
+                        <div class="setup-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Configure Settings</h3>
+                                <p>Adjust screen capture settings according to your preferences:</p>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i>Capture resolution</li>
+                                    <li><i class="fas fa-check"></i>Analysis frequency</li>
+                                    <li><i class="fas fa-check"></i>Privacy zones (areas to exclude from analysis)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="setup-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Start Protection</h3>
+                                <p>Screen content analysis will now run in the background, alerting you to potential security threats.</p>
+                                <div class="step-note">
+                                    <strong>Privacy Note:</strong> All screen analysis happens locally on your device. No screenshots are sent to external servers.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- API Configuration Tab -->
                 <div class="setup-tab-content" id="api-setup">
-                    <h2>API Configuration</h2>
-                    <p>Sentinel MK2 uses the Groq API for AI-powered security analysis. Follow these steps to set up your API key.</p>
-                    
-                    <div class="setup-steps">
+                    <div class="setup-intro">
+                        <p>To use the AI-powered security features of Sentinel MK2, you'll need to add a Groq API key. Follow these steps to obtain and configure your free API key.</p>
+                    </div>
+
+                    <div class="setup-steps-container">
                         <div class="setup-step">
-                            <h3>Get a Groq API Key</h3>
-                            <p>Visit the <a href="https://console.groq.com/" target="_blank">Groq Console</a> to create an account and obtain an API key.</p>
-                            <ol>
-                                <li>Create a new account or log in</li>
-                                <li>Navigate to the API Keys section</li>
-                                <li>Click "Create API Key"</li>
-                                <li>Give your key a name (e.g., "Sentinel MK2")</li>
-                                <li>Copy your new API key</li>
-                            </ol>
-                            <div class="note-box">
-                                <p><strong>Note:</strong> Groq offers free API access with limits that should be sufficient for hackathon demonstration purposes.</p>
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Create a Groq Account</h3>
+                                <p>Visit the <a href="https://console.groq.com/" target="_blank">Groq Console</a> and sign up for a free account.</p>
+                                <div class="step-action">
+                                    <a href="https://console.groq.com/" target="_blank" class="secondary-btn"><i class="fas fa-external-link-alt"></i> Go to Groq Console</a>
+                                </div>
                             </div>
                         </div>
-                        
+
                         <div class="setup-step">
-                            <h3>Configure Sentinel MK2</h3>
-                            <p>Add your API key to Sentinel MK2:</p>
-                            <ol>
-                                <li>Click the Sentinel MK2 icon in your browser toolbar</li>
-                                <li>Navigate to the "Settings" tab (gear icon)</li>
-                                <li>Find the "API Configuration" section</li>
-                                <li>Enter your Groq API key in the field provided</li>
-                                <li>Click "Save" to store your API key</li>
-                            </ol>
-                            <img src="images/api-key-settings.png" alt="API Key Settings" class="setup-image">
-                            <div class="tip-box">
-                                <p><strong>Security tip:</strong> Your API key is stored securely in Chrome's extension storage and is not shared with any third parties.</p>
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Generate an API Key</h3>
+                                <p>In the Groq Console, navigate to the API Keys section.</p>
+                                <p>Click "Create API Key" and give your key a name (e.g., "Sentinel MK2").</p>
                             </div>
                         </div>
-                        
+
                         <div class="setup-step">
-                            <h3>Test the API Connection</h3>
-                            <p>To verify that Sentinel MK2 can connect to the Groq API:</p>
-                            <ol>
-                                <li>Go to the "AI Chat" tab</li>
-                                <li>Ask a security-related question like "Is this website secure?"</li>
-                                <li>If properly configured, you should receive an answer from the AI</li>
-                            </ol>
-                            <div class="tip-box">
-                                <p><strong>Usage tip:</strong> Be specific with your questions to get the most accurate security insights.</p>
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Copy Your API Key</h3>
+                                <p>Copy the generated API key. <strong>Important:</strong> This key will only be shown once, so make sure to save it.</p>
+                                <div class="step-note warning">
+                                    <strong>Security Note:</strong> Keep your API key private and never share it publicly.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="setup-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Add the API Key to Sentinel</h3>
+                                <p>Click the Sentinel MK2 icon in your browser toolbar, then go to the Settings tab.</p>
+                                <p>Paste your Groq API key in the designated field and click "Save Settings".</p>
+                            </div>
+                        </div>
+
+                        <div class="setup-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Verify Connection</h3>
+                                <p>To verify your API key is working correctly, go to the "AI Chat" tab in the extension and ask a simple security question.</p>
+                                <p>If you receive a response, your API key is configured correctly!</p>
                             </div>
                         </div>
                     </div>
@@ -191,20 +235,21 @@
         </div>
     </section>
 
-    <section class="hackathon-note">
+    <!-- Project Info Section -->
+    <section class="hackathon-info-section">
         <div class="container">
-            <div class="note-box">
-                <h2>HackHazards 25 Project</h2>
+            <div class="info-card">
+                <h2><i class="fas fa-code"></i> HackHazards 25 Project</h2>
                 <p>Sentinel MK2 was developed as part of the HackHazards 25 hackathon organized by the Name Space community. This is a demonstration project that showcases the potential of browser extensions for enhancing web security.</p>
-                <p>If you encounter any issues with the setup, please check the GitHub repository for troubleshooting tips or to report issues.</p>
-                <div class="text-center" style="margin-top: var(--spacing-4);">
-                    <a href="https://github.com/yourusername/sentinel-mk2/issues" class="secondary-btn" target="_blank">Report Issues</a>
+                <p>If you encounter any issues with the setup, please check the <a href="https://github.com/amaansyed27/Sentinel" target="_blank">GitHub repository</a> for troubleshooting tips or to report issues.</p>
+                <div class="action-buttons">
+                    <a href="https://github.com/amaansyed27/Sentinel/issues" target="_blank" class="secondary-btn"><i class="fas fa-bug"></i> Report Issues</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- New HackHazards Banner Section -->
+    <!-- Submission Banner -->
     <section class="hackathon-banner">
         <div class="hackathon-banner-content">
             <h2>HackHazards '25 Submission</h2>
@@ -213,47 +258,73 @@
         </div>
     </section>
 
+    <!-- Redesigned Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <div class="logo">
+        <div class="footer-wave"></div>
+        <div class="container footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
                         <img src="images/sentinel-logo.png" alt="Sentinel Logo">
                         <span>SENTINEL</span>
                     </div>
-                    <p>Advanced web security assistant created for the HackHazards 25 hackathon.</p>
+                    <p>An AI-powered browser security extension enhancing your online safety with real-time threat detection and analysis.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/amaansyed27/Sentinel" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://sentinel-cyber.vercel.app" target="_blank" class="social-icon">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-column">
                     <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="setup.html">Setup Guide</a></li>
-                        <li><a href="download.html">Download</a></li>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="features.html"><i class="fas fa-chevron-right"></i> Features</a></li>
+                        <li><a href="setup.html"><i class="fas fa-chevron-right"></i> Setup Guide</a></li>
+                        <li><a href="download.html"><i class="fas fa-chevron-right"></i> Download</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Resources</h4>
-                    <ul>
-                        <li><a href="https://github.com/yourusername/sentinel-mk2" target="_blank">GitHub Repository</a></li>
-                        <li><a href="https://console.groq.com/" target="_blank">Groq API Console</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/amaansyed27/Sentinel" target="_blank"><i class="fas fa-chevron-right"></i> GitHub Repository</a></li>
+                        <li><a href="https://console.groq.com/" target="_blank"><i class="fas fa-chevron-right"></i> Groq API Console</a></li>
+                        <li><a href="https://github.com/mediar-ai/screenpipe" target="_blank"><i class="fas fa-chevron-right"></i> Screenpipe Documentation</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Project Links</h4>
-                    <div class="social-icons">
-                        <a href="https://github.com/yourusername/sentinel-mk2" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://sentinel-cyber.vercel.app" target="_blank"><i class="fas fa-globe"></i></a>
-                    </div>
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/amaansyed27/Sentinel/issues" target="_blank"><i class="fas fa-chevron-right"></i> Report Issues</a></li>
+                        <li><a href="https://github.com/amaansyed27/Sentinel/pulls" target="_blank"><i class="fas fa-chevron-right"></i> Contribute</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2024 HackHazards 25 - Sentinel Security. Created for educational purposes.</p>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 Sentinel MK2. All rights reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="https://github.com/amaansyed27/Sentinel/blob/main/LICENSE" target="_blank">License</a>
+                </div>
+            </div>
+            
+            <div class="hackathon-credit">
+                Created for <a href="https://namespace.community/hackhazards" target="_blank">HackHazards 25</a> - India's biggest community hackathon by Namespace.
             </div>
         </div>
     </footer>
 
     <script src="js/site.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/setup-tabs.js"></script>
 </body>
 </html>

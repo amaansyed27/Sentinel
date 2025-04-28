@@ -364,4 +364,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add additional styles
     addStyles();
+    
+    // Load enhanced header script
+    if (document.querySelector('.enhanced-header')) {
+        const enhancedHeaderScript = document.createElement('script');
+        enhancedHeaderScript.src = 'js/enhanced-header.js';
+        document.body.appendChild(enhancedHeaderScript);
+    }
+
+    // Load navigation script 
+    const navigationScript = document.createElement('script');
+    navigationScript.src = 'js/navigation.js';
+    document.body.appendChild(navigationScript);
 });

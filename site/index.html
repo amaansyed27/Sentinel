@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sentinel MK2 - Advanced Web Security Assistant</title>
+    <title>Sentinel MK2 - Advanced Browser Security</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/additional.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Sentinel MK2 provides real-time security analysis, protecting you from online threats with AI-powered insights and comprehensive scanning.">
 </head>
 <body>
-    <header>
-        <div class="container">
+    <!-- Enhanced Header -->
+    <header class="enhanced-header">
+        <div class="container header-container">
             <nav>
                 <div class="logo">
                     <img src="images/sentinel-logo.png" alt="Sentinel Logo">
                     <span>SENTINEL</span>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="setup.html">Setup Guide</a></li>
-                    <li><a href="download.html" class="download-btn">Download</a></li>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="features.html"><i class="fas fa-shield-alt"></i> Features</a></li>
+                    <li><a href="setup.html"><i class="fas fa-cogs"></i> Setup Guide</a></li>
+                    <li><a href="download.html"><i class="fas fa-download"></i> Download</a></li>
                 </ul>
+                <a href="https://github.com/amaansyed27/Sentinel" target="_blank" class="github-btn">
+                    <i class="fab fa-github"></i> <span>GitHub</span>
+                </a>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -31,73 +37,96 @@
         </div>
     </header>
 
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <h1>Advanced Security for Your Browser</h1>
-                <p>Sentinel MK2 provides real-time security analysis, protecting you from online threats with AI-powered insights and continuous monitoring.</p>
-                <div class="hackathon-badge">
-                    <span>Created for HackHazards 25 Hackathon</span>
+                <p>Sentinel MK2 provides real-time security analysis, protecting you from online threats with AI-powered insights and comprehensive scanning.</p>
+                <div class="hackathon-badge-large">
+                    <span><i class="fas fa-code"></i> HackHazards 25 Project</span>
                 </div>
                 <div class="hero-buttons">
-                    <a href="download.html" class="primary-btn">Download Extension</a>
+                    <a href="download.html" class="primary-btn animated-button">
+                        <span class="button-text"><i class="fas fa-download"></i> Download Extension</span>
+                        <span class="button-icon"><i class="fas fa-arrow-right"></i></span>
+                    </a>
                     <a href="setup.html" class="secondary-btn">Setup Guide</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/hero-illustration.png" alt="Sentinel MK2 Demo">
+                <img src="images/hero-illustration.png" alt="Sentinel MK2 Illustration">
             </div>
+        </div>
+        <div class="security-particles">
+            <div class="particle" style="--i:1;"></div>
+            <div class="particle" style="--i:2;"></div>
+            <div class="particle" style="--i:3;"></div>
+            <div class="particle" style="--i:4;"></div>
+            <div class="particle" style="--i:5;"></div>
         </div>
     </section>
 
+    <!-- Video Demo Section -->
     <section class="video-demo">
         <div class="container">
             <h2 class="section-title">See Sentinel MK2 in Action</h2>
+            <p class="section-subtitle">Watch the full demonstration of Sentinel MK2's features created for the HackHazards 25 hackathon.</p>
             <div class="video-container">
                 <iframe width="855" height="479" src="https://www.youtube.com/embed/U0GpWONDVRU" title="Sentinel MK2 Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="video-description">
-                <p>Watch the full demonstration of Sentinel MK2's features created for the HackHazards 25 hackathon. See how the extension analyzes website security in real-time and provides AI-powered insights.</p>
+                <p>See how the extension analyzes website security in real-time and provides AI-powered insights.</p>
             </div>
         </div>
     </section>
 
-    <section class="features">
+    <!-- Key Features Section -->
+    <section class="key-features">
         <div class="container">
             <h2 class="section-title">Key Features</h2>
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-tachometer-alt"></i>
                     </div>
-                    <h3>Real-time Security Scoring</h3>
-                    <p>Get instant security assessments of any website you visit with our comprehensive scoring system.</p>
+                    <h3>Real-time Security Scanning</h3>
+                    <p>Get instant security assessments of websites you visit with our comprehensive scanning capabilities.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
                     <h3>Certificate Analysis</h3>
-                    <p>Detailed SSL/TLS certificate verification to ensure secure connections.</p>
+                    <p>Detailed SSL/TLS certificate verification ensures your connections are secure and trustworthy.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI Security Chat</h3>
-                    <p>Ask security questions about any website and get intelligent, context-aware answers powered by Groq API.</p>
-                </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-icon">
                         <i class="fas fa-link"></i>
                     </div>
                     <h3>Link Security Markers</h3>
-                    <p>Visual indicators show the security level of links across the web.</p>
+                    <p>Visual indicators show the security level of links across the web before you click them.</p>
                 </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Security Chat</h3>
+                    <p>Ask questions about website security and get intelligent, context-aware answers.</p>
+                </div>
+            </div>
+            <div class="features-cta">
+                <a href="features.html" class="primary-btn"><i class="fas fa-shield-alt"></i> Explore All Features</a>
             </div>
         </div>
     </section>
 
+    <!-- How It Works Section - Centered -->
     <section class="how-it-works">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
@@ -105,48 +134,55 @@
                 <div class="workflow-step">
                     <div class="step-number">1</div>
                     <h3>Download & Install</h3>
-                    <p>Download and load the Sentinel MK2 extension using Chrome's developer mode.</p>
+                    <p>Download and load the extension in developer mode</p>
                 </div>
                 <div class="workflow-step">
                     <div class="step-number">2</div>
                     <h3>Configure API Key</h3>
-                    <p>Set up your free Groq API key for AI-powered security insights.</p>
+                    <p>Set up your free Groq API key for AI-powered security insights</p>
                 </div>
                 <div class="workflow-step">
                     <div class="step-number">3</div>
                     <h3>Browse Securely</h3>
-                    <p>Receive real-time security assessments and alerts as you browse.</p>
+                    <p>Receive real-time security assessments as you browse the internet</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="hackathon-info">
+    <!-- Project Info Section -->
+    <section class="project-info">
         <div class="container">
-            <h2 class="section-title">About This Project</h2>
-            <div class="hackathon-content">
-                <div class="hackathon-description">
-                    <p>Sentinel MK2 was created during the <strong>HackHazards 25 hackathon</strong> organized by the Name Space community. This project showcases how browser extensions can be leveraged to enhance web security through AI integration.</p>
-                    <p>As a hackathon project, Sentinel MK2 is provided as a developer extension that needs to be loaded unpacked. Follow our setup guide to get started.</p>
+            <div class="info-columns">
+                <div class="info-column">
+                    <div class="info-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>About This Project</h3>
+                    <p>Sentinel MK2 was created during the HackHazards 25 hackathon organized by the Name Space community. This project showcases how browser extensions can be leveraged to enhance web security.</p>
+                    <p>As a hackathon project, Sentinel MK2 is provided as a developer extension that needs to be loaded unpacked.</p>
                 </div>
-                <div class="hackathon-actions">
-                    <a href="https://github.com/yourusername/sentinel-mk2" target="_blank" class="secondary-btn"><i class="fab fa-github"></i> View on GitHub</a>
+                <div class="info-column">
+                    <div class="info-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Tech Stack</h3>
+                    <ul class="tech-stack">
+                        <li><i class="fas fa-check"></i> Chrome Extension APIs</li>
+                        <li><i class="fas fa-check"></i> Groq API (LLaMa 3 70B model)</li>
+                        <li><i class="fas fa-check"></i> Screenpipe integration</li>
+                        <li><i class="fas fa-check"></i> Modern JavaScript</li>
+                        <li><i class="fas fa-check"></i> Webpack for optimization</li>
+                    </ul>
+                    <a href="https://github.com/amaansyed27/Sentinel" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Secure Your Browsing?</h2>
-                <p>Download Sentinel MK2 today and take control of your online security.</p>
-                <a href="download.html" class="primary-btn">Get Sentinel MK2</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- New HackHazards Banner Section -->
+    <!-- HackHazards Banner Section -->
     <section class="hackathon-banner">
         <div class="hackathon-banner-content">
             <h2>HackHazards '25 Submission</h2>
@@ -155,47 +191,77 @@
         </div>
     </section>
 
+    <!-- Redesigned Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <div class="logo">
+        <div class="footer-wave"></div>
+        <div class="container footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
                         <img src="images/sentinel-logo.png" alt="Sentinel Logo">
                         <span>SENTINEL</span>
                     </div>
-                    <p>Advanced web security assistant created for the HackHazards 25 hackathon.</p>
+                    <p>An AI-powered browser security extension enhancing your online safety with real-time threat detection and analysis.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/amaansyed27/Sentinel" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://sentinel-cyber.vercel.app" target="_blank" class="social-icon">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-column">
                     <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="setup.html">Setup Guide</a></li>
-                        <li><a href="download.html">Download</a></li>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="features.html"><i class="fas fa-chevron-right"></i> Features</a></li>
+                        <li><a href="setup.html"><i class="fas fa-chevron-right"></i> Setup Guide</a></li>
+                        <li><a href="download.html"><i class="fas fa-chevron-right"></i> Download</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Resources</h4>
-                    <ul>
-                        <li><a href="https://github.com/yourusername/sentinel-mk2" target="_blank">GitHub Repository</a></li>
-                        <li><a href="https://console.groq.com/" target="_blank">Groq API Console</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/amaansyed27/Sentinel" target="_blank"><i class="fas fa-chevron-right"></i> GitHub Repository</a></li>
+                        <li><a href="https://console.groq.com/" target="_blank"><i class="fas fa-chevron-right"></i> Groq API Console</a></li>
+                        <li><a href="https://github.com/mediar-ai/screenpipe" target="_blank"><i class="fas fa-chevron-right"></i> Screenpipe Documentation</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Project Links</h4>
-                    <div class="social-icons">
-                        <a href="https://github.com/yourusername/sentinel-mk2" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://sentinel-cyber.vercel.app" target="_blank"><i class="fas fa-globe"></i></a>
-                    </div>
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/amaansyed27/Sentinel/issues" target="_blank"><i class="fas fa-chevron-right"></i> Report Issues</a></li>
+                        <li><a href="https://github.com/amaansyed27/Sentinel/pulls" target="_blank"><i class="fas fa-chevron-right"></i> Contribute</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2024 HackHazards 25 - Sentinel Security. Created for educational purposes.</p>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 Sentinel MK2. All rights reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="https://github.com/amaansyed27/Sentinel/blob/main/LICENSE" target="_blank">License</a>
+                </div>
+            </div>
+            
+            <div class="hackathon-credit">
+                Created for <a href="https://namespace.community/hackhazards" target="_blank">HackHazards 25</a> - India's biggest community hackathon by Namespace.
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <script src="js/site.js"></script>
+    <script src="js/home-animations.js"></script>
 </body>
 </html>

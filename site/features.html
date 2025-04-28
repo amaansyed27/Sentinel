@@ -12,19 +12,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
+    <header class="enhanced-header">
+        <div class="container header-container">
             <nav>
                 <div class="logo">
                     <img src="images/sentinel-logo.png" alt="Sentinel Logo">
                     <span>SENTINEL</span>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html" class="active">Features</a></li>
-                    <li><a href="setup.html">Setup Guide</a></li>
-                    <li><a href="download.html">Download</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="features.html" class="active"><i class="fas fa-shield-alt"></i> Features</a></li>
+                    <li><a href="setup.html"><i class="fas fa-cogs"></i> Setup Guide</a></li>
+                    <li><a href="download.html"><i class="fas fa-download"></i> Download</a></li>
                 </ul>
+                <a href="https://github.com/amaansyed27/Sentinel" target="_blank" class="github-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -514,20 +517,7 @@
                     <div class="try-step-number">4</div>
                     <h3>Explore</h3>
                     <p>Experience enhanced web security</p>
-                    <a href="https://github.com/yourusername/sentinel-mk2" class="try-btn" target="_blank">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Try Sentinel MK2?</h2>
-                <p>Download and set up our hackathon project today to experience these security features.</p>
-                <div class="cta-buttons">
-                    <a href="download.html" class="primary-btn">Download Now</a>
-                    <a href="setup.html" class="secondary-btn">Setup Guide</a>
+                    <a href="https://github.com/amaansyed27/Sentinel" class="try-btn" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
@@ -542,43 +532,67 @@
         </div>
     </section>
 
+    <!-- Redesigned Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <div class="logo">
+        <div class="footer-wave"></div>
+        <div class="container footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
                         <img src="images/sentinel-logo.png" alt="Sentinel Logo">
                         <span>SENTINEL</span>
                     </div>
-                    <p>Advanced web security assistant created for the HackHazards 25 hackathon.</p>
+                    <p>An AI-powered browser security extension enhancing your online safety with real-time threat detection and analysis.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/amaansyed27/Sentinel" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://sentinel-cyber.vercel.app" target="_blank" class="social-icon">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-column">
                     <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="setup.html">Setup Guide</a></li>
-                        <li><a href="download.html">Download</a></li>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="features.html"><i class="fas fa-chevron-right"></i> Features</a></li>
+                        <li><a href="setup.html"><i class="fas fa-chevron-right"></i> Setup Guide</a></li>
+                        <li><a href="download.html"><i class="fas fa-chevron-right"></i> Download</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Resources</h4>
-                    <ul>
-                        <li><a href="https://github.com/yourusername/sentinel-mk2" target="_blank">GitHub Repository</a></li>
-                        <li><a href="https://console.groq.com/" target="_blank">Groq API Console</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/amaansyed27/Sentinel" target="_blank"><i class="fas fa-chevron-right"></i> GitHub Repository</a></li>
+                        <li><a href="https://console.groq.com/" target="_blank"><i class="fas fa-chevron-right"></i> Groq API Console</a></li>
+                        <li><a href="https://github.com/mediar-ai/screenpipe" target="_blank"><i class="fas fa-chevron-right"></i> Screenpipe Documentation</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Project Links</h4>
-                    <div class="social-icons">
-                        <a href="https://github.com/yourusername/sentinel-mk2" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://sentinel-cyber.vercel.app" target="_blank"><i class="fas fa-globe"></i></a>
-                    </div>
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/amaansyed27/Sentinel/issues" target="_blank"><i class="fas fa-chevron-right"></i> Report Issues</a></li>
+                        <li><a href="https://github.com/amaansyed27/Sentinel/pulls" target="_blank"><i class="fas fa-chevron-right"></i> Contribute</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2024 HackHazards 25 - Sentinel Security. Created for educational purposes.</p>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 Sentinel MK2. All rights reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="https://github.com/amaansyed27/Sentinel/blob/main/LICENSE" target="_blank">License</a>
+                </div>
+            </div>
+            
+            <div class="hackathon-credit">
+                Created for <a href="https://namespace.community/hackhazards" target="_blank">HackHazards 25</a> - India's biggest community hackathon by Namespace.
             </div>
         </div>
     </footer>
