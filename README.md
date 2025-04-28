@@ -1,5 +1,5 @@
 # 🛡️ Sentinel MK2
-
+![github-submission-banner](site/images/hackhazards-banner.png)
 [![Hackathon Project](https://img.shields.io/badge/Hackathon-HackHazards%2025-blueviolet)](https://sentinel-cyber.vercel.app)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Demo Video](https://img.shields.io/badge/Demo-YouTube-red)](https://youtu.be/U0GpWONDVRU)
