@@ -4,7 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
+    // Mobile menu toggle - improved
     const mobileMenuToggle = document.querySelector('.mobile-menu');
     const navLinks = document.querySelector('.nav-links');
     
@@ -19,6 +19,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     icon.classList.remove('fa-bars');
                     icon.classList.add('fa-times');
                 } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuToggle.contains(event.target) && !navLinks.contains(event.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                if (icon && icon.classList.contains('fa-times')) {
                     icon.classList.remove('fa-times');
                     icon.classList.add('fa-bars');
                 }

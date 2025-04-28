@@ -32,15 +32,61 @@
         </div>
     </header>
 
-    <section class="features-hero">
-        <div class="container">
-            <h1 class="section-title">Comprehensive Security Features</h1>
-            <p class="text-center">Discover how Sentinel MK2 provides advanced protection for your online activities</p>
-            <div class="hackathon-badge-large">
-                <span>HackHazards 25 Project</span>
-            </div>
+    <!-- Sticky Section Navigator -->
+    <div class="section-navigator" id="sectionNav">
+        <ul>
+            <li><a href="#hero" class="active" data-section="hero"><i class="fas fa-home"></i><span>Top</span></a></li>
+            <li><a href="#overview" data-section="overview"><i class="fas fa-th-large"></i><span>Overview</span></a></li>
+            <li><a href="#security-scoring" data-section="security-scoring"><i class="fas fa-shield-alt"></i><span>Scoring</span></a></li>
+            <li><a href="#link-markers" data-section="link-markers"><i class="fas fa-link"></i><span>Links</span></a></li>
+            <li><a href="#ai-chat" data-section="ai-chat"><i class="fas fa-robot"></i><span>AI Chat</span></a></li>
+            <li><a href="#screen-analysis" data-section="screen-analysis"><i class="fas fa-desktop"></i><span>Screen Analysis</span></a></li>
+            <li><a href="#comparison" data-section="comparison"><i class="fas fa-table"></i><span>Compare</span></a></li>
+            <li><a href="#hackathon" data-section="hackathon"><i class="fas fa-code"></i><span>Journey</span></a></li>
+        </ul>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Progress Indicator -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <section class="features-hero" id="hero">
+    <div class="container">
+        <h1 class="section-title">Comprehensive Security Features</h1>
+        <p class="text-center">Discover how Sentinel MK2 provides advanced protection for your online activities</p>
+        <div class="hackathon-badge-large">
+            <span><i class="fas fa-code"></i> HackHazards 25 Project</span>
         </div>
-    </section>
+        
+        <!-- Moved outside of relative positioning, now directly below the badge -->
+        <div class="hero-explore-button">
+            <p>Explore Features</p>
+            <a href="#overview" class="scroll-down-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Visual elements for design -->
+    <div class="hero-floating-icon" style="top: 20%; left: 15%;">
+        <i class="fas fa-shield-alt"></i>
+    </div>
+    <div class="hero-floating-icon" style="top: 70%; left: 85%;">
+        <i class="fas fa-lock"></i>
+    </div>
+    <div class="hero-floating-icon" style="top: 30%; left: 80%;">
+        <i class="fas fa-user-shield"></i>
+    </div>
+    <div class="hero-floating-icon" style="top: 80%; left: 20%;">
+        <i class="fas fa-fingerprint"></i>
+    </div>
+</section>
 
     <section class="video-demo">
         <div class="container">
@@ -54,45 +100,57 @@
         </div>
     </section>
 
-    <section class="feature-overview">
+    <div class="section-divider">
+        <div class="divider-icon"><i class="fas fa-shield-alt"></i></div>
+    </div>
+
+    <section class="feature-overview" id="overview">
         <div class="container">
             <h2 class="section-title">Key Features at a Glance</h2>
             <div class="feature-cards">
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Real-time Security Scoring</h3>
                     <p>Evaluate website security instantly with comprehensive scoring and visual indicators</p>
+                    <a href="#security-scoring" class="feature-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-icon">
                         <i class="fas fa-link"></i>
                     </div>
                     <h3>Link Security Markers</h3>
                     <p>Visual indicators that show link security before you click, protecting you from malicious sites</p>
+                    <a href="#link-markers" class="feature-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-icon">
                         <i class="fas fa-robot"></i>
                     </div>
                     <h3>AI-Powered Security Chat</h3>
                     <p>Ask security questions and get intelligent answers about any website you're visiting</p>
+                    <a href="#ai-chat" class="feature-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="feature-icon">
                         <i class="fas fa-desktop"></i>
                     </div>
                     <h3>Screen Content Analysis</h3>
                     <p>Detect visual phishing attempts and protect sensitive information on your screen</p>
+                    <a href="#screen-analysis" class="feature-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
+    <div class="section-divider">
+        <div class="divider-icon"><i class="fas fa-certificate"></i></div>
+    </div>
+
     <section class="detailed-features">
         <div class="container">
-            <div class="feature-spotlight">
+            <div class="feature-spotlight" id="security-scoring" data-aos="fade-right">
                 <div class="feature-spotlight-image">
                     <img src="images/security-score.png" alt="Security Scoring">
                 </div>
@@ -132,7 +190,11 @@
                 </div>
             </div>
             
-            <div class="feature-spotlight reverse">
+            <div class="section-divider small">
+                <div class="divider-icon"><i class="fas fa-link"></i></div>
+            </div>
+            
+            <div class="feature-spotlight reverse" id="link-markers" data-aos="fade-left">
                 <div class="feature-spotlight-image">
                     <img src="images/link-markers.png" alt="Link Security Markers">
                 </div>
@@ -172,7 +234,11 @@
                 </div>
             </div>
             
-            <div class="feature-spotlight">
+            <div class="section-divider small">
+                <div class="divider-icon"><i class="fas fa-robot"></i></div>
+            </div>
+            
+            <div class="feature-spotlight" id="ai-chat" data-aos="fade-right">
                 <div class="feature-spotlight-image">
                     <img src="images/ai-chat.png" alt="AI Security Chat">
                 </div>
@@ -212,7 +278,11 @@
                 </div>
             </div>
             
-            <div class="feature-spotlight reverse">
+            <div class="section-divider small">
+                <div class="divider-icon"><i class="fas fa-desktop"></i></div>
+            </div>
+            
+            <div class="feature-spotlight reverse" id="screen-analysis" data-aos="fade-left">
                 <div class="feature-spotlight-image">
                     <img src="images/screen-monitoring.png" alt="Screen Content Analysis">
                 </div>
@@ -254,101 +324,171 @@
         </div>
     </section>
     
-    <section class="feature-comparison">
-        <div class="container">
-            <h2 class="section-title">How Sentinel MK2 Compares</h2>
-            <p class="text-center">See how our hackathon project stands out from other security tools</p>
-            
-            <div class="comparison-table-container">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Features</th>
-                            <th>Sentinel MK2</th>
-                            <th>Basic Security Extensions</th>
-                            <th>Enterprise Security Suites</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Real-time Website Scanning</td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Certificate Analysis</td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Link Security Markers</td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-times cross"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Screen Content Analysis</td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-times cross"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>AI-Powered Security Chat</td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-times cross"></i></td>
-                            <td><i class="fas fa-times cross"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Free to Use</td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-times cross"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Open Source</td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-times cross"></i></td>
-                            <td><i class="fas fa-times cross"></i></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-    
-    <section class="hackathon-info">
-        <div class="container">
-            <h2>Hackathon Implementation Notes</h2>
-            <div class="implementation-notes">
-                <div class="note-card">
-                    <h3><i class="fas fa-code"></i> Technical Stack</h3>
-                    <ul>
-                        <li>Chrome Extension APIs</li>
-                        <li>Groq API Integration</li>
-                        <li>Screenpipe for screen content analysis</li>
-                        <li>Vanilla JavaScript for core functionality</li>
-                        <li>Webpack for build system</li>
-                    </ul>
-                </div>
-                <div class="note-card">
-                    <h3><i class="fas fa-lightbulb"></i> Inspiration</h3>
-                    <p>This project was inspired by the need for more proactive security tools that can analyze not just website code but actual visual content to protect users from sophisticated threats and scams.</p>
-                </div>
-                <div class="note-card">
-                    <h3><i class="fas fa-flask"></i> Experimental Features</h3>
-                    <ul>
-                        <li>Link security marking using ML-based risk assessment</li>
-                        <li>Screen content security analysis with visual pattern recognition</li>
-                        <li>Context-aware AI assistant that understands security implications</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="section-divider">
+        <div class="divider-icon"><i class="fas fa-table"></i></div>
+    </div>
 
-    <section class="try-it-yourself">
+    <section class="feature-comparison" id="comparison">
+    <div class="container">
+        <h2 class="section-title">How Sentinel MK2 Compares</h2>
+        <p class="text-center">See how our hackathon project stands out from other security tools with its unique combination of features</p>
+        
+        <div class="comparison-table-container">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Features</th>
+                        <th>Sentinel MK2</th>
+                        <th>Basic Security Extensions</th>
+                        <th>Enterprise Security Suites</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Real-time Website Scanning</td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Certificate Analysis</td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Link Security Markers</td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-times cross"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Screen Content Analysis</td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-times cross"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>AI-Powered Security Chat</td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-times cross"></i></td>
+                        <td><i class="fas fa-times cross"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Free to Use</td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-times cross"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Open Source</td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-times cross"></i></td>
+                        <td><i class="fas fa-times cross"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="comparison-summary text-center">
+            <p><strong>Only Sentinel MK2</strong> combines AI-powered security assistance with comprehensive protection, all while being free and open source.</p>
+        </div>
+    </div>
+</section>
+    
+    <div class="section-divider">
+        <div class="divider-icon"><i class="fas fa-code"></i></div>
+    </div>
+    
+    <section class="hackathon-info" id="hackathon" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title">Behind the Scenes: Hackathon Journey</h2>
+        
+        <div class="implementation-carousel">
+            <button class="carousel-btn prev-btn" aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide">
+                        <div class="note-card">
+                            <h3><i class="fas fa-code"></i> Tech Stack</h3>
+                            <ul>
+                                <li>Chrome Extension APIs for browser integration</li>
+                                <li>Groq API with LLaMa 3 70B model</li>
+                                <li>Screenpipe for screen content analysis</li>
+                                <li>Modern vanilla JavaScript architecture</li>
+                                <li>Webpack build system for optimization</li>
+                            </ul>
+                        </div>
+                        <div class="note-card">
+                            <h3><i class="fas fa-lightbulb"></i> Inspiration</h3>
+                            <p>Our project was born from the need to create more proactive security tools that can analyze not just website code but also visual content to protect users from sophisticated threats and scams.</p>
+                            <p>We wanted to leverage AI to provide context-aware security insights that adapt to each user's browsing habits.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="note-card">
+                            <h3><i class="fas fa-flask"></i> Innovations</h3>
+                            <ul>
+                                <li>ML-based risk assessment for link marking</li>
+                                <li>Visual pattern recognition for detecting phishing</li>
+                                <li>Context-aware AI security assistant</li>
+                                <li>Real-time certificate analysis system</li>
+                                <li>Adaptive security recommendations</li>
+                            </ul>
+                        </div>
+                        <div class="note-card">
+                            <h3><i class="fas fa-users"></i> Team Challenges</h3>
+                            <p>Our team overcame several challenges during the 36-hour hackathon:</p>
+                            <ul>
+                                <li>Optimizing LLM prompts for security analysis</li>
+                                <li>Implementing reliable screen capture integration</li>
+                                <li>Building an accessible, user-friendly interface</li>
+                                <li>Creating real-time link security indicators</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="note-card">
+                            <h3><i class="fas fa-road"></i> Future Roadmap</h3>
+                            <ul>
+                                <li>Enhanced phishing detection algorithms</li>
+                                <li>Cross-browser compatibility (Firefox, Safari)</li>
+                                <li>Expanded threat intelligence database</li>
+                                <li>Community contributed security rules</li>
+                                <li>Performance optimizations</li>
+                            </ul>
+                        </div>
+                        <div class="note-card">
+                            <h3><i class="fas fa-trophy"></i> Hackathon Outcome</h3>
+                            <p>Our Sentinel MK2 project demonstrates the potential of AI-enhanced web security that provides actionable, context-aware protection for users of all technical backgrounds.</p>
+                            <p>We're proud to showcase how browser extensions can be powerful tools for improving online safety in an increasingly complex threat landscape.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-btn next-btn" aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <div class="carousel-indicators"></div>
+        </div>
+    </div>
+</section>
+
+    <div class="section-divider">
+        <div class="divider-icon"><i class="fas fa-download"></i></div>
+    </div>
+
+    <section class="try-it-yourself" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">Try It Yourself</h2>
             <div class="try-steps">
@@ -390,6 +530,15 @@
                     <a href="setup.html" class="secondary-btn">Setup Guide</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- HackHazards Banner Section -->
+    <section class="hackathon-banner">
+        <div class="hackathon-banner-content">
+            <h2>HackHazards '25 Submission</h2>
+            <p>This project was proudly built during HackHazards '25 - India's biggest community hackathon organized by the Namespace community.</p>
+            <img src="images/hackhazards-banner.png" alt="HackHazards 2025 Hackathon Banner">
         </div>
     </section>
 
@@ -435,5 +584,7 @@
     </footer>
 
     <script src="js/site.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/features-enhancement.js"></script>
 </body>
 </html>

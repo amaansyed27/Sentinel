@@ -1,5 +1,7 @@
 # 🛡️ Sentinel MK2
+
 ![github-submission-banner](site/images/hackhazards-banner.png)
+
 [![Hackathon Project](https://img.shields.io/badge/Hackathon-HackHazards%2025-blueviolet)](https://sentinel-cyber.vercel.app)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Demo Video](https://img.shields.io/badge/Demo-YouTube-red)](https://youtu.be/U0GpWONDVRU)
@@ -89,5 +91,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
     <img src="site/images/sentinel-logo.png" alt="Sentinel Logo" width="80" height="80">
   </a>
   <br>
-  <i>Created for HackHazards 25 - A project by Team RedLine</i>
+  <i>Created for HackHazards 25 - A project by Amaan Syed</i>
 </p>
