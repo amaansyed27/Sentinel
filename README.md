@@ -1,88 +1,108 @@
 # 🛡️ Sentinel MK2
 
-![github-submission-banner](site/images/hackhazards-banner.png)
+![HackHazards Submission Banner](site/images/hackhazards-banner.png)
 
 [![Hackathon Project](https://img.shields.io/badge/Hackathon-HackHazards%2025-blueviolet)](https://sentinel-cyber.vercel.app)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Demo Video](https://img.shields.io/badge/Demo-YouTube-red)](https://youtu.be/U0GpWONDVRU)
 
-A next-generation web security browser extension with AI-powered analysis, created for the HackHazards 25 hackathon.
+> **Sentinel MK2** is a next-gen browser extension for **real-time web security**, built with **AI-powered analysis** and visual indicators to enhance your online safety—developed during **HackHazards 25**, where it ranked in the **Top 100 projects** out of **8000+ submissions** from **17500+ participants**, representing **25+ countries** and **30+ universities**.
 
-## 🌟 Features
+---
 
-- **Real-time Security Scoring**: Get instant security assessments of any website you visit
-- **Certificate Analysis**: Detailed SSL/TLS certificate verification for secure connections
-- **AI Security Chat**: Ask questions about website security and get AI-powered insights via Groq API
-- **Link Security Markers**: Visual indicators show the security level of links before you click them
-- **Screen Content Analysis**: Monitor screen content for potential security risks with Screenpipe
+## 🌐 Live Project
 
-## 🚀 Demo & Links
+* 🔗 **Website**: [sentinel-cyber.vercel.app](https://sentinel-cyber.vercel.app)
+* 🎥 **Demo Video**: [Watch on YouTube](https://youtu.be/U0GpWONDVRU)
+* 📄 **Privacy Policy**: [View Here](https://sentinel-cyber.vercel.app/privacy.html)
 
-- **Website**: [sentinel-cyber.vercel.app](https://sentinel-cyber.vercel.app)
-- **Demo Video**: [Watch on YouTube](https://youtu.be/U0GpWONDVRU)
-- **Privacy Policy**: [View Privacy Policy](https://sentinel-cyber.vercel.app/privacy.html)
+---
 
-## 📋 Setup Guide
+## 🌟 Key Features
 
-### Extension Setup
+* **🔒 Real-Time Security Scoring**: Instantly assess the security of any website you visit
+* **🔐 SSL/TLS Certificate Insights**: View detailed certificate verification for HTTPS connections
+* **🤖 AI Security Chat**: Ask AI-powered questions about the current site’s safety using the Groq API
+* **🧭 Link Security Markers**: Get visual cues on link safety before clicking
+* **🖥️ Screen Content Analysis** *(via Screenpipe)*: Detect potential phishing or risky content on-screen
 
-1. **Download the Extension**
-   - Download the unpacked extension from [our website](https://sentinel-cyber.vercel.app/download.html) or use the files in the `dist` folder of this repo
+---
 
-2. **Enable Developer Mode**
-   - Open Chrome and navigate to `chrome://extensions/` 
-   - Toggle on "Developer mode" in the top-right corner
+## 🧰 Tech Stack
 
-3. **Load Unpacked Extension**
-   - Click "Load unpacked" and select the folder containing the extension files
+* **Chrome Extension APIs** — For deep browser integration
+* **Groq API (LLaMA 3 70B)** — Powers the AI assistant
+* **Screenpipe** — Enables real-time screen analysis
+* **JavaScript + Webpack** — Core logic and bundling
 
-4. **Configure API Key**
-   - Get a free API key from [Groq](https://console.groq.com/)
-   - Click the Sentinel MK2 icon in your browser toolbar
-   - Go to Settings and add your Groq API key
+---
 
-5. **You're Ready to Go!**
-   - The extension is now active and protecting your browsing
+## ⚙️ Installation Guide
 
-### Screenpipe Setup (Optional)
+### 🔗 Browser Extension Setup
 
-For enhanced screen content analysis:
+1. **Download**:
 
-1. Open Windows PowerShell or Command Prompt
-2. Run: `iwr get.screenpi.pe/cli.ps1 | iex`
-3. Then type: `screenpipe.exe`
-4. Always run this before using the extension's screen analysis features
+   * Grab the unpacked extension from [Download Page](https://sentinel-cyber.vercel.app/download.html) or use the `dist` folder.
 
-## 🛠️ Technology Stack
+2. **Load in Chrome**:
 
-- **Chrome Extension APIs**: For browser integration and site analysis
-- **Groq API**: Powers the AI security insights using LLaMA 3 70B model
-- **Screenpipe**: Enables screen content analysis
-- **JavaScript**: Core functionality and browser interaction
-- **Webpack**: Build system for the extension
+   * Visit `chrome://extensions/`
+   * Enable *Developer Mode*
+   * Click **Load unpacked** and select the extension folder
 
-## 🎬 Hackathon Project Context
+3. **API Key Setup**:
 
-Sentinel MK2 was created during the HackHazards 25 hackathon. This project demonstrates how browser extensions can leverage AI to enhance online security through:
+   * Get your free Groq API key from [Groq Console](https://console.groq.com)
+   * Open the extension → Settings → Paste your API key
 
-- Automated security analysis of websites
-- Context-aware AI assistant for security questions
-- Visual phishing detection using screen content analysis
-- Proactive link safety indicators
+4. ✅ You’re all set! The extension is now active.
 
-## 📝 Contributing
+### 🖥️ Screenpipe Setup *(Optional)*
 
-As this was a hackathon project, we're open to contributions! Feel free to:
+1. Open PowerShell or CMD
+2. Run:
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b new-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin new-feature`
-5. Submit a pull request
+   ```sh
+   iwr get.screenpi.pe/cli.ps1 | iex
+   screenpipe.exe
+   ```
+3. Keep this running in the background when using screen analysis features
+
+---
+
+## 🎯 Hackathon Purpose
+
+Sentinel MK2 was built for **HackHazards 25**, a cybersecurity-focused hackathon. The goal:
+
+> Empower users to **proactively identify and understand** security threats through a browser-native, AI-integrated tool.
+
+### Project Highlights:
+
+* Contextual AI explanations for non-technical users
+* Proactive phishing and fake-site detection
+* Real-time, privacy-first assessments
+
+---
+
+## 🤝 Contributing
+
+Want to help improve Sentinel MK2? Follow these steps:
+
+```bash
+# Fork & clone the repo
+git checkout -b feature-name
+# Make your changes
+git commit -m "Describe your changes"
+git push origin feature-name
+# Open a pull request!
+```
+
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License – see [LICENSE](LICENSE)
 
 ---
 
@@ -91,5 +111,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
     <img src="site/images/sentinel-logo.png" alt="Sentinel Logo" width="80" height="80">
   </a>
   <br>
-  <i>Created for HackHazards 25 - A project by Amaan Syed</i>
+  <i>Created for HackHazards 25 – A project by Amaan Syed<br>
+  🏅 Top 100 Project | Among 8000+ projects | 17500+ participants</i>
 </p>
+
+---
